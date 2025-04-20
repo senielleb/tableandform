@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Tables and Forms</title>
+        <style> 
+            body {
+
+            }
+            .whole-page {
+                border-radius: 10px;
+                flex-direction: column;
+                align-items: center;
+                display: flex;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 100px;
+            }
+            table {
+                border: 6px solid #123458;
+                border-collapse: collapse;
+            }
+
+            th {
+                border: 6px solid #123458;
+                font-size: 25px;
+                padding: 10px;
+                background-color: antiquewhite;
+
+            }
+
+            tr, td {
+                border: 3px solid gray;
+                padding:18px;
+            }
+
+            .main-highlight {
+                background-color: #123458;
+                color: white;
+            }
+
+            .third-row {
+                background-color: pink;
+            }
+            
+            .highlight-one {
+                background-color: lightgoldenrodyellow;
+
+            }
+
+            .highlight-two {
+                background-color: aliceblue;
+            }
+
+            form {
+                width: 570px;
+                border: 2px solid #123458;
+                background-color: white;
+            }
+
+            .form-header  {
+                display: flex;
+                background-color: pink;
+                font-weight: bold;
+            }
+
+            .form-header div {
+                flex: 0.5;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .one-row {
+                display: flex;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                align-items: flex-start;
+            }
+
+            .one-row label {
+                flex: 1;
+            }
+
+            .one-row input[type="text"],
+            .one-row select,
+            .one-row textarea {
+                flex: 2;
+                padding: 5px;
+            }
+
+            .one-row .radio-group,
+            .one-row .checkbox-group {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .submit-btn {
+                width: 100%;
+                padding: 10px;
+                background-color: pink;
+                color: black;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+            }
+
+            .submit-btn:hover {
+                background-color: #b2daeb;
+            }
+
+            .text-left { 
+                text-align: left; 
+            }
+            .text-center { 
+                text-align: center; 
+            }
+            .text-right { 
+                text-align: right; 
+            } 
+
+        </style>
+    </head>
+
+    <body>
+        <div class="whole-page"> 
+            <table>
+                <tr> 
+                    <th colspan="4"> Invoice Tabular Data</th>    
+                </tr>
+
+                <tr class="main-highlight">
+                    <td colspan="2"><b>Invoice #123456789</b></td>
+                    <td colspan="2" style="text-align: right;"><b>14 January 2025</b></td>
+                </tr>
+
+                <tr class="third-row">
+                    <td colspan="2"> 
+                        <strong>Pay to:</strong><br>
+                        Acme Billing Co. <br>
+                        123 Main St. <br> 
+                        Cityville, NA 12345
+                    </td>
+                    <td colspan="2">
+                        <strong>Customer:</strong> <br> 
+                        John Smith <br> 
+                        321 Willow Way <br> 
+                        Southeast Northwestershire, MA 54321
+                    </td>
+                </tr>
+
+                <tr class="main-highlight">
+                    <td><strong>Name/Description</strong></td>
+                    <td style="text-align: center;"><strong>Qty.</strong></td>
+                    <td style="width:5px; text-align: center;"><strong>@</strong></td>
+                    <td style="text-align: right;"><strong>Cost</strong></td>
+                </tr>
+
+                <tr class="highlight-one">
+                    <td>Paperclips</td>
+                    <td>1000</td>
+                    <td>0.01</td>
+                    <td style="text-align: right;">10.00</td>
+                </tr>
+
+                <tr class="highlight-two">
+                    <td>Staples (Box)</td>
+                    <td>100</td>
+                    <td>1.00</td>
+                    <td style="text-align: right;">100.00</td>
+                </tr>
+
+                <tr class="highlight-one">
+                    <td>Bond Paper (Box)</td>
+                    <td>100</td>
+                    <td>1.00</td>
+                    <td style="text-align: right;">110</td>
+                </tr>
+
+                <tr class="highlight-two"> 
+                    <td colspan="2"><strong>Subtotal:</strong></td>
+                    <td colspan="2" style="text-align: right;">110.00</td>
+                </tr>
+
+                <tr class="highlight-one"> 
+                    <td colspan="2"><b>Tax</b></td>
+                    <td>8%</td>
+                    <td style="text-align: right;">8.80</td>
+                </tr>
+
+                <tr class="main-highlight">
+                    <td colspan="3"><b>Grand Total</b></td>
+                    <td style="text-align: right;">$ 118.80</td>
+                </tr>
+            </table>
+        </div>
+        <div class="whole-page"> 
+            <form>
+
+                <div class="form-header">
+                    <div>Name</div>
+                    <div>Value</div>
+                </div>
+              
+                <p class="one-row">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" placeholder="Type your name here">
+                </p>
+              
+                <p class="one-row">
+                  <label>Sex:</label>
+                  <span class="radio-group">
+                    <label><input type="radio" name="sex" id="male"> Male</label>
+                    <label><input type="radio" name="sex" id="female"> Female</label>
+                    <label><input type="radio" name="sex" id="other"> Other</label>
+                  </span>
+                </p>
+              
+                <p class="one-row">
+                  <label for="eye">Eye Color:</label>
+                  <select id="eye">
+                    <option value="black">black</option>
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                  </select>
+                </p>
+              
+                <p class="one-row">
+                  <label>Check all that Apply:</label>
+                  <span class="checkbox-group">
+                    <label><input type="checkbox"> Over 6ft. Tall</label>
+                    <label><input type="checkbox"> Over 200 pounds</label>
+                    <label><input type="checkbox"> Less than 200 pounds</label>
+                  </span>
+                </p>
+              
+                <p class="one-row">
+                  <label for="athletic">Describe your athletic ability:</label>
+                  <textarea id="athletic" rows="4"></textarea>
+                </p>
+              
+                <p class="one-row">
+                  <button class="submit-btn" type="submit">Enter my Information</button>
+                </p>
+              
+              </form>
+              
+        </div>
+    </body>
+</html>
