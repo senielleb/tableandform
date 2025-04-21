@@ -51,80 +51,47 @@
                 background-color: aliceblue;
             }
 
-            form {
-                width: 570px;
-                border: 2px solid #123458;
-                background-color: white;
+            .form-table {
+                border: 4px solid #456789; 
+                border-collapse: collapse;
+                margin-top: 20px; 
+                border: none;
             }
 
-            .form-header  {
-                display: flex;
-                background-color: pink;
+
+            .one-row td {
+                background-color: #ffffff;
+                padding: 20px;
+                border: none;
+                padding: 30px;
+            }
+
+            label {
                 font-weight: bold;
             }
 
-            .form-header div {
-                flex: 0.5;
-                text-align: center;
-                padding: 10px;
-            }
-
-            .one-row {
-                display: flex;
-                padding: 10px;
-                border-bottom: 1px solid #ccc;
-                align-items: flex-start;
-            }
-
-            .one-row label {
-                flex: 1;
-            }
-
-            .one-row input[type="text"],
-            .one-row select,
-            .one-row textarea {
-                flex: 2;
-                padding: 5px;
-            }
-
-            .one-row .radio-group,
-            .one-row .checkbox-group {
-                flex: 2;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%; 
+                padding: 8px; 
+                border: 1px solid #ccc; 
             }
 
             .submit-btn {
-                width: 100%;
-                padding: 10px;
-                background-color: pink;
-                color: black;
-                font-weight: bold;
+                background-color: #123458; 
+                color: white; 
+                padding: 10px 15px; 
                 border: none;
-                cursor: pointer;
+                cursor: pointer; 
             }
-
-            .submit-btn:hover {
-                background-color: #b2daeb;
-            }
-
-            .text-left { 
-                text-align: left; 
-            }
-            .text-center { 
-                text-align: center; 
-            }
-            .text-right { 
-                text-align: right; 
-            } 
 
         </style>
     </head>
 
     <body>
         <div class="whole-page"> 
-            <table>
+            <table class="form-table">
                 <tr> 
                     <th colspan="4"> Invoice Tabular Data</th>    
                 </tr>
@@ -195,56 +162,62 @@
             </table>
         </div>
         <div class="whole-page"> 
-            <form>
+            <table>
+                <form>
 
-                <div class="form-header">
-                    <div>Name</div>
-                    <div>Value</div>
-                </div>
-              
-                <p class="one-row">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" placeholder="Type your name here">
-                </p>
-              
-                <p class="one-row">
-                  <label>Sex:</label>
-                  <span class="radio-group">
-                    <label><input type="radio" name="sex" id="male"> Male</label>
-                    <label><input type="radio" name="sex" id="female"> Female</label>
-                    <label><input type="radio" name="sex" id="other"> Other</label>
-                  </span>
-                </p>
-              
-                <p class="one-row">
-                  <label for="eye">Eye Color:</label>
-                  <select id="eye">
-                    <option value="black">black</option>
-                    <option value="blue">blue</option>
-                    <option value="green">green</option>
-                  </select>
-                </p>
-              
-                <p class="one-row">
-                  <label>Check all that Apply:</label>
-                  <span class="checkbox-group">
-                    <label><input type="checkbox"> Over 6ft. Tall</label>
-                    <label><input type="checkbox"> Over 200 pounds</label>
-                    <label><input type="checkbox"> Less than 200 pounds</label>
-                  </span>
-                </p>
-              
-                <p class="one-row">
-                  <label for="athletic">Describe your athletic ability:</label>
-                  <textarea id="athletic" rows="4"></textarea>
-                </p>
-              
-                <p class="one-row">
-                  <button class="submit-btn" type="submit">Enter my Information</button>
-                </p>
-              
-              </form>
-              
+                    <tr class="form-header">
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+
+                    <tr class="one-row">
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" placeholder="Type your name here"></td>
+                    </tr>
+                
+                    <tr class="one-row">
+                    <td><label>Sex:</label></td>
+                    <td>
+                    <span class="radio-group">
+                        <label><input type="radio" name="sex" id="male"> Male</label>
+                        <label><input type="radio" name="sex" id="female"> Female</label>
+                        <label><input type="radio" name="sex" id="other"> Other</label>
+                    </span>
+                    </td>
+                    </tr>
+
+                    <tr class="one-row">
+                    <td><label for="eye">Eye Color:</label></td>
+                    <td>
+                    <select id="eye">
+                        <option value="black">black</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                    </select>
+                    </td>
+                    </tr>
+                
+                    <tr class="one-row">
+                    <td><label>Check all that Apply:</label></td>
+                    <td>
+                    <span class="checkbox-group">
+                        <label><input type="checkbox"> Over 6ft. Tall</label>
+                        <label><input type="checkbox"> Over 200 pounds</label>
+                        <label><input type="checkbox"> Less than 200 pounds</label>
+                    </span>
+                    </td>
+                    </tr>
+                
+                    <tr class="one-row">
+                    <td><label for="athletic">Describe your athletic ability:</label></td>
+                    <td><textarea id="athletic" rows="4"></textarea></td>
+                    </tr>
+                
+                    <tr class="one-row">
+                    <td colspan="2" style="text-align: center;"><button class="submit-btn" type="submit">Enter my Information</button></td>
+                    </tr>
+                </form>
+            </table>  
         </div>
     </body>
 </html>
